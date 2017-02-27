@@ -20,9 +20,11 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
-	
+	public Usuario(){
+		
+	}
 	public Usuario(String nombreDeUsuario, String contraseña, String nombre, String apellidos, String correoElectronico,
-			Date fechaDeNacimiento, String pais, String ciudadDeResidencia, long id) {
+			Date fechaDeNacimiento, String pais, String ciudadDeResidencia) {
 		this.nombreDeUsuario = nombreDeUsuario;
 		this.contraseña = contraseña;
 		this.nombre = nombre;
@@ -31,7 +33,6 @@ public class Usuario {
 		this.fechaDeNacimiento = fechaDeNacimiento;
 		this.pais = pais;
 		this.ciudadDeResidencia = ciudadDeResidencia;
-		this.id = id;
 	}
 
 	public String getNombreDeUsuario() {
