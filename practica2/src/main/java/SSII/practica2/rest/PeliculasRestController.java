@@ -8,20 +8,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import SSII.practica2.model.Usuario;
+import SSII.practica2.model.Peliculas;
 
 @RestController
-public class UsuarioRestController {
+public class PeliculasRestController {
 	@Autowired
-	private UsuarioService userService;
+	private PeliculasService peliculaService;
 
 	@RequestMapping(value = "/user", method = RequestMethod.GET)
-	public List<Usuario> getUsuarios() {
-		return userService.getTodosLosUsuarios();
+	public List<Peliculas> getUsuarios() {
+		return peliculaService.getAllPeliculas();
 	}
 
 	@RequestMapping(value = "/user/{index}", method = RequestMethod.GET)
-	public Usuario getPelicula(@PathVariable("index") int index) {
-		return userService.getUsuarioPorId(index);
+	public Peliculas getPelicula(@PathVariable("index") int index) {
+		return peliculaService.getPeliculaById(index);
 	}
 }

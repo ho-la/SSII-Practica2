@@ -8,20 +8,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import SSII.practica2.model.Usuario;
+import SSII.practica2.model.IntentoConexion;
 
 @RestController
-public class UsuarioRestController {
+public class IntentoConexionRestController {
 	@Autowired
-	private UsuarioService userService;
+	private IntentoConexionService intentoConexionService;
 
 	@RequestMapping(value = "/user", method = RequestMethod.GET)
-	public List<Usuario> getUsuarios() {
-		return userService.getTodosLosUsuarios();
+	public List<IntentoConexion> getUsuarios() {
+		return intentoConexionService.getAllIntentoConexion();
 	}
 
 	@RequestMapping(value = "/user/{index}", method = RequestMethod.GET)
-	public Usuario getPelicula(@PathVariable("index") int index) {
-		return userService.getUsuarioPorId(index);
+	public IntentoConexion getPelicula(@PathVariable("index") int index) {
+		return intentoConexionService.getIntentoConexionPorId(index);
 	}
 }
