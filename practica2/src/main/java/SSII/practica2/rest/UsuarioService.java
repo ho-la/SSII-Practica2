@@ -25,8 +25,8 @@ public class UsuarioService {
 	public Usuario getUsuarioPorNombre(String nombre) {
 		return userRepository.findByNombre(nombre);
 	}
-	public Usuario getUsuarioPorApellido(String apellido) {
-		return userRepository.findByApellido(apellido);
+	public Usuario getUsuarioPorApellidos(String apellidos) {
+		return userRepository.findByApellidos(apellidos);
 	}
 	public Usuario getUsuarioPorCorreo(String correo) {
 		return userRepository.findByCorreoElectronico(correo);
