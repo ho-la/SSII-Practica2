@@ -8,7 +8,7 @@ import javax.persistence.Id;
 
 public class Usuario {
 	private String nombreDeUsuario;
-	private String contraseña;
+	private String contrasena;
 	private String nombre;
 	private String apellidos;
 	private String correoElectronico;
@@ -26,7 +26,7 @@ public class Usuario {
 	public Usuario(String nombreDeUsuario, String contraseña, String nombre, String apellidos, String correoElectronico,
 			Date fechaDeNacimiento, String pais, String ciudadDeResidencia) {
 		this.nombreDeUsuario = nombreDeUsuario;
-		this.contraseña = contraseña;
+		this.contrasena = contraseña;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.correoElectronico = correoElectronico;
@@ -43,12 +43,12 @@ public class Usuario {
 		this.nombreDeUsuario = nombreDeUsuario;
 	}
 
-	public String getContraseña() {
-		return contraseña;
+	public String getContrasena() {
+		return contrasena;
 	}
 
-	public void setContraseña(String contraseña) {
-		this.contraseña = contraseña;
+	public void setContrasena(String contraseña) {
+		this.contrasena = contraseña;
 	}
 
 	public String getNombre() {
