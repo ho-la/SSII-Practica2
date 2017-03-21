@@ -2,10 +2,13 @@ package SSII.practica2.model;
 
 import java.util.Date;
 import java.util.List;
+
 import org.springframework.data.repository.CrudRepository;
 
 public interface UsuarioRepository extends CrudRepository<Usuario,Long>{
-
+	
+	Usuario findById(long id);
+	List<Usuario> findAll();
 	Usuario findByNombreDeUsuario(String nombreDeUsuario);
 	//por contrasena
 	Usuario findByNombre(String nombre);

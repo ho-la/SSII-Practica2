@@ -4,20 +4,22 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import SSII.practica2.model.Usuario;
 import SSII.practica2.model.UsuarioRepository;
 
+@Service
 public class UsuarioService {
 	@Autowired
 	private UsuarioRepository userRepository;
 	
 	// Getters y setters ...
-	public List<Usuario> getTodosLosUsuarios() {
+	public List<Usuario> getUsuarios() {
 		return (List<Usuario>) userRepository.findAll();
 	}
-	public Usuario getUsuarioPorId(long id) {
-		return userRepository.findOne(id);
+	public Usuario getUsuariosById(long id) {
+		return userRepository.findById(id);
 	}
 	public Usuario getUsuarioPorNombreDeUsuario(String nombre) {
 		return userRepository.findByNombreDeUsuario(nombre);

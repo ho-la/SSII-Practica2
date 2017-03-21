@@ -2,11 +2,17 @@ package SSII.practica2.model;
 
 import java.util.List;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+@Entity
 public class Peliculas {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO )
+	private long id;
+	
 	private String titulo;
 	private String pais;
 	private int anio;
@@ -15,18 +21,16 @@ public class Peliculas {
 	private String URLTrailer;
 	private List<String> etiquetas;
 	
-	private List<Reproduccion> reproducciones;
+	//private List<Reproduccion> reproducciones;
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO )
-	private long id;
 	
 	public Peliculas(){
 		
 	}
 
-	public Peliculas(String titulo, String pais, int anio, String nombreDelDirector, String resumen,
+	public Peliculas(long id,String titulo, String pais, int anio, String nombreDelDirector, String resumen,
 			String uRLTrailer, List<String> etiquetas) {
+		this.id=id;
 		this.titulo = titulo;
 		this.pais = pais;
 		this.anio = anio;
@@ -99,12 +103,14 @@ public class Peliculas {
 	public void setId(long id) {
 		this.id = id;
 	}
-	
-	public List<Reproduccion> getReproducciones() {
+	/*
+	 * public List<Reproduccion> getReproducciones() {
 		return reproducciones;
 	}
 
 	public void setReproducciones(List<Reproduccion> reproducciones) {
 		this.reproducciones = reproducciones;
 	}
+	 */
+	
 }

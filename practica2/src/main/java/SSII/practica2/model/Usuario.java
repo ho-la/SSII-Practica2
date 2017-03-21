@@ -2,11 +2,18 @@ package SSII.practica2.model;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity
 public class Usuario {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
+	
 	private String nombreDeUsuario;
 	private String contrasena;
 	private String nombre;
@@ -16,15 +23,13 @@ public class Usuario {
 	private String pais;
 	private String ciudadDeResidencia;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
 
 	public Usuario(){
 		
 	}
-	public Usuario(String nombreDeUsuario, String contraseña, String nombre, String apellidos, String correoElectronico,
+	public Usuario(long id,String nombreDeUsuario, String contraseña, String nombre, String apellidos, String correoElectronico,
 			Date fechaDeNacimiento, String pais, String ciudadDeResidencia) {
+		this.id=id;
 		this.nombreDeUsuario = nombreDeUsuario;
 		this.contrasena = contraseña;
 		this.nombre = nombre;

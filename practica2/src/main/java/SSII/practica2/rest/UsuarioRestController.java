@@ -17,11 +17,11 @@ public class UsuarioRestController {
 
 	@RequestMapping(value = "/user", method = RequestMethod.GET)
 	public List<Usuario> getUsuarios() {
-		return userService.getTodosLosUsuarios();
+		return userService.getUsuarios();
 	}
 
 	@RequestMapping(value = "/user/{index}", method = RequestMethod.GET)
 	public Usuario getPelicula(@PathVariable("index") int index) {
-		return userService.getUsuarioPorId(index);
+		return userService.getUsuariosById(index);
 	}
 }

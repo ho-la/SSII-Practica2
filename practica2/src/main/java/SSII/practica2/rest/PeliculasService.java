@@ -1,13 +1,14 @@
 package SSII.practica2.rest;
 
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import SSII.practica2.model.Peliculas;
 import SSII.practica2.model.PeliculasRepository;
 
+@Service
 public class PeliculasService {
 	@Autowired
 	private PeliculasRepository peliculasRepository;
@@ -17,7 +18,7 @@ public class PeliculasService {
 		return (List<Peliculas>) peliculasRepository.findAll();
 	}
 	public Peliculas getPeliculaById(long id) {
-		return peliculasRepository.findOne(id);
+		return peliculasRepository.findById(id);
 	}
 	public Peliculas getPeliculaByTitulo(String titulo) {
 		return peliculasRepository.findByTitulo(titulo);

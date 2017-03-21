@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import SSII.practica2.model.Peliculas;
 
+
 @RestController
 public class PeliculasRestController {
 	@Autowired
