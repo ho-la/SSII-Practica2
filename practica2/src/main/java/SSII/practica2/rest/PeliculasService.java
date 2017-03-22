@@ -32,7 +32,4 @@ public class PeliculasService {
 	public List<Peliculas> getPeliculasPorNombreDelDirector(String nombreDirector) {
 		return (List<Peliculas>) peliculasRepository.findByNombreDelDirector(nombreDirector);
 	}
-	public List<Peliculas> getPeliculasPorEtiquetas(List<String> tags) {
-		return (List<Peliculas>) peliculasRepository.findByEtiquetas(tags);
-	}
 }

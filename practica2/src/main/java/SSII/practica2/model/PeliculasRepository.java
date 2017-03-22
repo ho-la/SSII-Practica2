@@ -12,7 +12,4 @@ public interface PeliculasRepository extends CrudRepository<Peliculas,Long>{
 	List<Peliculas> findByPais(String pais);
 	List<Peliculas> findByAnio(int anio);
 	List<Peliculas> findByNombreDelDirector(String nombreDelDirector);
-	//Peliculas findByResumen(String resumen);
-	//Peliculas findByTrailer(String URLTrailer);
-	List<Peliculas> findByEtiquetas(List<String> etiquetas);
 }

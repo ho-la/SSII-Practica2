@@ -19,9 +19,7 @@ public class Peliculas {
 	private String nombreDelDirector;
 	private String resumen;
 	private String URLTrailer;
-	private List<String> etiquetas;
-	
-	//private List<Reproduccion> reproducciones;
+	//private List<String> etiquetas;
 	
 	
 	public Peliculas(){
@@ -29,15 +27,14 @@ public class Peliculas {
 	}
 
 	public Peliculas(long id,String titulo, String pais, int anio, String nombreDelDirector, String resumen,
-			String uRLTrailer, List<String> etiquetas) {
+			String uRLTrailer) {
 		this.id=id;
 		this.titulo = titulo;
 		this.pais = pais;
 		this.anio = anio;
 		this.nombreDelDirector = nombreDelDirector;
 		this.resumen = resumen;
-		URLTrailer = uRLTrailer;
-		this.etiquetas = etiquetas;
+		this.URLTrailer = uRLTrailer;
 	}
 
 	public String getTitulo() {
@@ -88,14 +85,6 @@ public class Peliculas {
 		URLTrailer = uRLTrailer;
 	}
 
-	public List<String> getEtiquetas() {
-		return etiquetas;
-	}
-
-	public void setEtiquetas(List<String> etiquetas) {
-		this.etiquetas = etiquetas;
-	}
-
 	public long getId() {
 		return id;
 	}
@@ -103,14 +92,5 @@ public class Peliculas {
 	public void setId(long id) {
 		this.id = id;
 	}
-	/*
-	 * public List<Reproduccion> getReproducciones() {
-		return reproducciones;
-	}
-
-	public void setReproducciones(List<Reproduccion> reproducciones) {
-		this.reproducciones = reproducciones;
-	}
-	 */
-	
+		
 }

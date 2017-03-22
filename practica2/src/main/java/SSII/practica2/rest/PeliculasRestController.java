@@ -16,12 +16,12 @@ public class PeliculasRestController {
 	@Autowired
 	private PeliculasService peliculaService;
 
-	@RequestMapping(value = "/user", method = RequestMethod.GET)
+	@RequestMapping(value = "/pelicula", method = RequestMethod.GET)
 	public List<Peliculas> getUsuarios() {
 		return peliculaService.getAllPeliculas();
 	}
 
-	@RequestMapping(value = "/user/{index}", method = RequestMethod.GET)
+	@RequestMapping(value = "/pelicula/{index}", method = RequestMethod.GET)
 	public Peliculas getPelicula(@PathVariable("index") int index) {
 		return peliculaService.getPeliculaById(index);
 	}
