@@ -1,4 +1,4 @@
-package SSII.practica2.rest;
+package ssii.practica2.service;
 
 import java.util.Date;
 import java.util.List;
@@ -6,8 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import SSII.practica2.model.IntentoConexion;
-import SSII.practica2.model.IntentoConexionRepository;
+import ssii.practica2.model.IntentoConexion;
+import ssii.practica2.repository.IntentoConexionRepository;
 
 @Service
 public class IntentoConexionService {

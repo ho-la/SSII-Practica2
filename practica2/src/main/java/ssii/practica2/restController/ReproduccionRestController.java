@@ -1,4 +1,4 @@
-package SSII.practica2.rest;
+package ssii.practica2.restController;
 
 import java.util.List;
 
@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import SSII.practica2.model.Reproduccion;
+import ssii.practica2.model.Reproduccion;
+import ssii.practica2.service.ReproduccionService;
 
 @RestController
 public class ReproduccionRestController {

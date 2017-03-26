@@ -1,12 +1,12 @@
-package SSII.practica2.rest;
+package ssii.practica2.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import SSII.practica2.model.Peliculas;
-import SSII.practica2.model.PeliculasRepository;
+import ssii.practica2.model.Peliculas;
+import ssii.practica2.repository.PeliculasRepository;
 
 @Service
 public class PeliculasService {

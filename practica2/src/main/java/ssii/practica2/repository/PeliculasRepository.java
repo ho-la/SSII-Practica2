@@ -1,8 +1,10 @@
-package SSII.practica2.model;
+package ssii.practica2.repository;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
+
+import ssii.practica2.model.Peliculas;
 
 public interface PeliculasRepository extends CrudRepository<Peliculas,Long>{
 

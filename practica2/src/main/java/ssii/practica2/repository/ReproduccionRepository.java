@@ -1,9 +1,11 @@
-package SSII.practica2.model;
+package ssii.practica2.repository;
 
 import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
+
+import ssii.practica2.model.Reproduccion;
 
 public interface ReproduccionRepository extends CrudRepository<Reproduccion,Long>{
 

@@ -1,6 +1,5 @@
-package SSII.practica2.model;
+package ssii.practica2.model;
 
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

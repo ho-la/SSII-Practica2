@@ -10,19 +10,25 @@
   <name>practica2</name>
   <url>http://maven.apache.org</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+	</properties>
 	
 	 <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.2.RELEASE</version>
+        <version>1.3.2.RELEASE</version>
     </parent>
 
 	
   	<dependencies>
-
+	
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		
 		<!-- Spring MVC -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -48,25 +54,25 @@
         </dependency>
   	</dependencies>
 		<!-- 
-	<build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>	
-	<repositories>
-        <repository>
-            <id>spring-releases</id>
-            <url>https://repo.spring.io/libs-release</url>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>spring-releases</id>
-            <url>https://repo.spring.io/libs-release</url>
-        </pluginRepository>
-    </pluginRepositories>
+		<build>
+        	<plugins>
+            	<plugin>
+                	<groupId>org.springframework.boot</groupId>
+                	<artifactId>spring-boot-maven-plugin</artifactId>
+            	</plugin>
+        	</plugins>
+    	</build>	
+		<repositories>
+	        <repository>
+	            <id>spring-releases</id>
+	            <url>https://repo.spring.io/libs-release</url>
+	        </repository>
+	    </repositories>
+	    <pluginRepositories>
+	        <pluginRepository>
+	            <id>spring-releases</id>
+	            <url>https://repo.spring.io/libs-release</url>
+	        </pluginRepository>
+	    </pluginRepositories>
      -->
 </project>

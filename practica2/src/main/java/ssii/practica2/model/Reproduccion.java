@@ -1,4 +1,4 @@
-package SSII.practica2.model;
+package ssii.practica2.model;
 
 import java.util.Date;
 

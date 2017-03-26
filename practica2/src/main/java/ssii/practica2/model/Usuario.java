@@ -1,7 +1,6 @@
-package SSII.practica2.model;
+package ssii.practica2.model;
 
-import java.util.Date;
-
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,43 +12,51 @@ public class Usuario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	
-	private String nombreDeUsuario;
-	private String contrasena;
+	@Column(name="nombre")
 	private String nombre;
-	private String apellidos;
-	private String correoElectronico;
-	private Date fechaDeNacimiento;
+	@Column(name="apellido")
+	private String apellido;
+	@Column(name="contrasena")
+	private String contrasena;
+	@Column(name="alias")
+	private String alias;
+	@Column(name="correo")
+	private String correo;
+	@Column(name="fechaNacimiento")
+	private String fechaNacimiento;
+	@Column(name="pais")
 	private String pais;
-	private String ciudadDeResidencia;
+	@Column(name="ciudad")
+	private String ciudad;
+	
 
 
 	public Usuario(){
 		
 	}
-	public Usuario(long id,String nombreDeUsuario, String contraseña, String nombre, String apellidos, String correoElectronico,
-			Date fechaDeNacimiento, String pais, String ciudadDeResidencia) {
+	public Usuario(int id,String nombreUsuario, String contraseña, String nombre, String apellidos, String correoElectronico,
+			String fechaNacimiento, String pais, String ciudadDeResidencia) {
 		this.id=id;
-		this.nombreDeUsuario = nombreDeUsuario;
+		this.alias = nombreUsuario;
 		this.contrasena = contraseña;
 		this.nombre = nombre;
-		this.apellidos = apellidos;
-		this.correoElectronico = correoElectronico;
-		this.fechaDeNacimiento = fechaDeNacimiento;
+		this.apellido = apellidos;
+		this.correo = correoElectronico;
+		this.fechaNacimiento = fechaNacimiento;
 		this.pais = pais;
-		this.ciudadDeResidencia = ciudadDeResidencia;
+		this.ciudad = ciudadDeResidencia;
 	}
 
 	public String getNombreDeUsuario() {
-		return nombreDeUsuario;
+		return this.alias;
 	}
 
 	public void setNombreDeUsuario(String nombreDeUsuario) {
-		this.nombreDeUsuario = nombreDeUsuario;
+		this.alias = nombreDeUsuario;
 	}
 
 	public String getContrasena() {
-		return contrasena;
+		return this.contrasena;
 	}
 
 	public void setContrasena(String contraseña) {
@@ -65,27 +72,27 @@ public class Usuario {
 	}
 
 	public String getApellidos() {
-		return apellidos;
+		return apellido;
 	}
 
 	public void setApellidos(String apellidos) {
-		this.apellidos = apellidos;
+		this.apellido = apellidos;
 	}
 
 	public String getCorreoElectronico() {
-		return correoElectronico;
+		return correo;
 	}
 
 	public void setCorreoElectronico(String correoElectronico) {
-		this.correoElectronico = correoElectronico;
+		this.correo = correoElectronico;
 	}
 
-	public Date getFechaDeNacimiento() {
-		return fechaDeNacimiento;
+	public String getFechaNacimiento() {
+		return this.fechaNacimiento;
 	}
 
-	public void setFechaDeNacimiento(Date fechaDeNacimiento) {
-		this.fechaDeNacimiento = fechaDeNacimiento;
+	public void setFechaNacimiento(String fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
 	}
 
 	public String getPaıis() {
@@ -97,18 +104,18 @@ public class Usuario {
 	}
 
 	public String getCiudadDeResidencia() {
-		return ciudadDeResidencia;
+		return ciudad;
 	}
 
 	public void setCiudadDeResidencia(String ciudadDeResidencia) {
-		this.ciudadDeResidencia = ciudadDeResidencia;
+		this.ciudad = ciudadDeResidencia;
 	}
 
 	public long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	
